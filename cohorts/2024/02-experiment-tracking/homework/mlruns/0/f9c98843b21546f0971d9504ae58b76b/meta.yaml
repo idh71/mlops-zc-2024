@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/f9c98843b21546f0971d9504ae58b76b/artifacts
+end_time: 1716372168889
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f9c98843b21546f0971d9504ae58b76b
+run_name: big-sloth-106
+run_uuid: f9c98843b21546f0971d9504ae58b76b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1716372150674
+status: 3
+tags: []
+user_id: codespace
