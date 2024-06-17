@@ -27,9 +27,14 @@ def load_pickle(filename: str):
     default="./output",
     help="Location where the processed NYC taxi trip data was saved"
 )
+
+# .tXMU$v&zcS*iz/.
 def run_train(data_path: str):
 
     #IDH
+
+#     
+    
     with mlflow.start_run():
         
         # mlflow.sklearn.autolog() #IDH

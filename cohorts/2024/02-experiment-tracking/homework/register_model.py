@@ -49,6 +49,9 @@ def train_and_log_model(data_path, params):
         test_rmse = root_mean_squared_error(y_test, rf.predict(X_test))
         mlflow.log_metric("test_rmse", test_rmse)
 
+        # I am adding this now to test the bucket used for artifacts
+        mlflow.sklearn.log_model(rf, "random_forest_model")
+
 
 @click.command()
 @click.option(
