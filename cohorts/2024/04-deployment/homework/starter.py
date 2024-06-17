@@ -14,6 +14,9 @@ import sys
 with open('model.bin', 'rb') as f_in:
     dv, model = pickle.load(f_in)
 
+# with open('model2.bin', 'rb') as f_in:
+#     dv, model = pickle.load(f_in)
+
 categorical = ['PULocationID', 'DOLocationID']
 
 
