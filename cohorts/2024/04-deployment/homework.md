@@ -19,6 +19,8 @@ What's the standard deviation of the predicted duration for this dataset?
 * 12.28
 * 18.28
 
+answer: 6.24
+
 
 ## Q2. Preparing the output
 
@@ -50,6 +52,8 @@ What's the size of the output file?
 * 56M
 * 66M
 
+answer: 66M
+
 __Note:__ Make sure you use the snippet above for saving the file. It should contain only these two columns. For this question, don't change the
 dtypes of the columns and use `pyarrow`, not `fastparquet`. 
 
@@ -59,6 +63,7 @@ dtypes of the columns and use `pyarrow`, not `fastparquet`.
 Now let's turn the notebook into a script. 
 
 Which command you need to execute for that?
+```jupyyter nbconvert --to script starter.ipynb```
 
 
 ## Q4. Virtual environment
@@ -73,6 +78,9 @@ and `Pipfile.lock`. The `Pipfile.lock` file keeps the hashes of the
 dependencies we use for the virtual env.
 
 What's the first hash for the Scikit-Learn dependency?
+```pipenv install scikit-learn==1.5.0 pandas --python 3.10```
+
+"sha256:057b991ac64b3e75c9c04b5f9395eaf19a6179244c089afdebaad98264bff37c"
 
 
 ## Q5. Parametrize the script
@@ -88,6 +96,8 @@ What's the mean predicted duration?
 * 14.29
 * 21.29
 * 28.29
+
+answer: 14.29 (I got 14.20)
 
 Hint: just add a print statement to your script.
 
@@ -131,6 +141,8 @@ for May 2023?
 * 7.24
 * 14.24
 * 21.19
+
+answer: 0.19
 
 
 ## Bonus: upload the result to the cloud (Not graded)
