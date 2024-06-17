@@ -8,9 +8,6 @@ import numpy as np
 import sys
 
 
-
-
-
 with open('model.bin', 'rb') as f_in:
     dv, model = pickle.load(f_in)
 
@@ -53,31 +50,32 @@ y_pred = model.predict(X_val)
 print("The mean predicted duriation is ", np.mean(y_pred))
 
 
-
-# df['ride_id'] = f'{year:04d}/{month:02d}_' + df.index.astype('str') 
-
-
-
-
-# df['predictions'] = y_pred
-
-
-
+df['ride_id'] = f'{year:04}/{month:02}_' + df.index.astype('str') 
 
 
 # df_result = df[['ride_id', 'predictions']]
+df_result = pd.DataFrame({
+    "ride_id": df["ride_id"],
+    "predictions": y_pred
+})
+output_file = f'df_result_{month:02d}_{year:04d}.parquet'
+bucket_name = 'mlflow-1234'
+output_path = f'gs://{bucket_name}/output/{output_file}'
+
+df_result.to_parquet(
+    output_path,
+    engine='pyarrow',
+    compression=None,
+    index=False
+)
+
+# df_loaded = pd.read_parquet(ouput_file, engine='pyarrow')
+df_loaded = pd.read_parquet(output_path, engine='pyarrow')
+
+# Print the loaded DataFrame to verify
+print(df_loaded.head())
 
 
-
-
-# ouput_file = 'df_result.parquet'
-
-# df_result.to_parquet(
-#     ouput_file,
-#     engine='pyarrow',
-#     compression=None,
-#     index=False
-# )
 
 
 
