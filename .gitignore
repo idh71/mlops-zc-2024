@@ -3,6 +3,10 @@ data/
 .bin
 *.db
 
+gc_bucket_key.json
+working_notes.md
+
+
 *.parquet
 *.html
 *.csv

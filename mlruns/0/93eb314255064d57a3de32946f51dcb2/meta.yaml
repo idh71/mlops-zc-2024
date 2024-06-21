@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/93eb314255064d57a3de32946f51dcb2/artifacts
+end_time: 1716470238544
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 93eb314255064d57a3de32946f51dcb2
+run_name: invincible-dog-963
+run_uuid: 93eb314255064d57a3de32946f51dcb2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1716470220054
+status: 3
+tags: []
+user_id: codespace
